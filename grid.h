@@ -14,13 +14,13 @@ private:
 
   int size;
   char** gridSpace;
-  int goalPosition [2];
-  int initialPosition [2];
+  int goalPosition[2];
+  int initialPosition[2];
 
 public:
 
   //gameGrid(); if a default grid is ever made, something else is broken
-  grid(string file, int mode); // accepts a text file
+  grid(string file, int setMode); // accepts a text file
   ~grid(); // dynamic memory -> we gotta delete stuff the right way
 
   // Precondition: x and y are ints within bounds of the grid
@@ -34,4 +34,4 @@ public:
   void print();
   // Postcondition: Prints the grid layout of chars to console
 
-}
+};

@@ -79,7 +79,6 @@ void grid::fill(int x, int y)
 
 void grid::print()
 {
-  cout << "Printout for grid.gridSpace" << endl;
   for (int y=0 ; y<size ; ++y){
     for (int x=0 ; x<size ; ++x){
       cout << gridSpace[x][y] << " ";

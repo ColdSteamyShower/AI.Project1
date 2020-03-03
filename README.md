@@ -14,3 +14,5 @@ vectors to store the state space tree until I switched to linked lists. This cre
 an issue where I was not able to remove objects correctly, and found a work-around
 using iterators. I'm aware that a linked list is not the most effective way to do
 this assignment, but it worked as a last-minute settlement.
+
+Strangely, the heuristic functions have a very difficult time completing for larger map sizes. Is this supposed to happen or did I mess up? Heuristic Functions do not seem to be A*

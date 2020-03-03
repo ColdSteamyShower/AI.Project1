@@ -5,12 +5,7 @@ using namespace std;
 class grid{
 private:
 
-  int mode;/*
-    0 = Manhattan
-    1 = Euclidean
-    2 = Heuristic Manhattan
-    3 = Heuristic Euclidean(A*)
-  */
+  friend class simulation;
 
   int size;
   char** gridSpace;
@@ -19,13 +14,15 @@ private:
 
 public:
 
-  //gameGrid(); if a default grid is ever made, something else is broken
-  grid(string file, int setMode); // accepts a text file
+  grid();
   ~grid(); // dynamic memory -> we gotta delete stuff the right way
+
+  void setGrid(string file);
+  //Postcondition: Reads the file and moves its information to this grid object
 
   // Precondition: x and y are ints within bounds of the grid
   char catPosition(int x, int y);
-  // Postcondition: returns char at that position, "Char at position"
+  // Postcondition: returns char at that position, "Char at position". If the position is out of bounds, returns an obstacle
 
   // Precondition: x and y are ints within bounds of the grid
   void fill(int x, int y);
